@@ -1,10 +1,11 @@
 import java.util.Scanner;
+
 public class HW4{
 	public static void main(String[] args){
 		Scanner sc = new Scanner(System.in);
 		String a = sc.nextLine();
 		int len = a.length();
-		StringBuilder f = new StringBuilder();
+		StringBuffer f = new StringBuffer();
    		String x = a.toLowerCase();
    		System.out.print(x.charAt(0));
 		for(int i = 1; i<len; i++){	
@@ -14,9 +15,7 @@ public class HW4{
 			}
 			else{
 				f.append(x.charAt(i));
-				
 		    }  
-  
 		}
 		System.out.println(f);
 	}

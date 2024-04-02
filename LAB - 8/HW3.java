@@ -6,7 +6,6 @@ public class HW3 {
         String a = scanner.nextLine();
         String b = scanner.nextLine();
 
-        // Concatenate the strings excluding common characters
         StringBuffer x = new StringBuffer();
         for (int i = 0; i < a.length(); i++) {
             char d = a.charAt(i);
@@ -22,7 +21,6 @@ public class HW3 {
             }
         }
 
-        // Convert the result to uppercase and print
         String f = x.toString().toUpperCase();
         System.out.println(f);
     }

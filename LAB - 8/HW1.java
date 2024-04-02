@@ -4,7 +4,7 @@ public class HW1 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String a = scanner.nextLine();
-        StringBuilder f = new StringBuilder();
+        StringBuffer f = new StringBuffer();
         int len = a.length();
         for (int i = a.length() - 1; i >= 0; i--) {
             if (a.charAt(i) == ' '){
