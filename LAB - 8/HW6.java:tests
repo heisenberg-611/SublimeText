@@ -16,5 +16,8 @@
 	},
 	{
 		"test": "weakNb123*\n"
+	},
+	{
+		"test": "weak123@\n"
 	}
 ]

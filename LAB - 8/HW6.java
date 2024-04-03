@@ -28,6 +28,11 @@ public class HW6{
         if (!(dj && dj1 && dj2 && dj3 && dj4)) {
            dj = false;
         }
-        System.out.println(dj);    
+        if(dj){
+        	System.out.println("True");
+        }
+        else{
+        	System.out.println("False"); 
+        }
     }
 }

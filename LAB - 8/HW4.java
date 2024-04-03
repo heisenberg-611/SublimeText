@@ -7,14 +7,20 @@ public class HW4{
 		int len = a.length();
 		StringBuffer f = new StringBuffer();
    		String x = a.toLowerCase();
-   		System.out.print(x.charAt(0));
-		for(int i = 1; i<len; i++){	
-			if(i%2!=0 ){
-				String c = x.toUpperCase();
-       			f.append(c.charAt(i));	
-			}
-			else{
-				f.append(x.charAt(i));
+   		int d = 1;
+		for(int i = 0; i<len; i++){
+		if(x.charAt(i)>= 'a' && x.charAt(i)<='z'){	
+				if(d%2==0){
+					String c = x.toUpperCase();
+       				f.append(c.charAt(i));	
+				}
+				else{
+					f.append(x.charAt(i));
+		    	}
+		    	d++;
+		    }
+		    else{
+		    	f.append(x.charAt(i));
 		    }  
 		}
 		System.out.println(f);
