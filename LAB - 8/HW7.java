@@ -6,7 +6,7 @@ public class HW7{
 		String s = sc.nextLine();
 		String c = sc.nextLine();
 		int count =0;
-		for(int i = 0; i<s.length()-c.length();i++){
+		for(int i = 0; i<s.length()-(c.length()-1);i++){
 			if(s.substring(i, i+c.length()).equals(c)){
 				count++;
 			}

@@ -21,7 +21,7 @@ public class HW5{
 				x.append(a.charAt(i));
 			}
 		}
-		String f = x.toString();
-		System.out.println(f);
+		//String f = x.toString();
+		System.out.println(x);
 	}
 }

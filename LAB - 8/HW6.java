@@ -11,7 +11,8 @@ public class HW6{
         boolean dj4 = false;
         if (a.length() < 8) {
             dj = false;
-        } else {
+        } 
+        else {
             for (int i = 0; i < a.length(); i++) {
                 char ch = a.charAt(i);
                 if ((ch >= 'A' && ch <= 'Z')) {

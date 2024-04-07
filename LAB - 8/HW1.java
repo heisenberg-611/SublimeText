@@ -6,7 +6,7 @@ public class HW1 {
         String a = scanner.nextLine();
         StringBuffer f = new StringBuffer();
         int len = a.length();
-        for (int i = a.length() - 1; i >= 0; i--) {
+        for (int i = len - 1; i >= 0; i--) {
             if (a.charAt(i) == ' '){
                 f.append(a, i + 1, len).append(" ");
                 len = i;
@@ -14,6 +14,6 @@ public class HW1 {
                 f.append(a, i, len);
             }
         }
-        System.out.println(f.toString());
+        System.out.println(f);
     }
 }
