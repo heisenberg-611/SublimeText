@@ -16,20 +16,26 @@ public class HW6 {
         for(int i = 0; i < N; i++) {
             for(int j = i + 1; j < N; j++) {
                 if(arr[i] > arr[j]) {
-                    String temp = names[i];
-                    names[i] = names[j];
-                    names[j] = temp;
-                    int temp2 = arr[i];
-                    arr[i] = arr[j];
-                    arr[j] = temp2;
+                    
+                    int temp1 = arr[j];
+                    arr[j] = arr[i];
+                    arr[i] = temp1;
+
+                    String temp2 = names[j];
+                    names[j] = names[i];
+                    names[i] = temp2;
                 }
             }
         }
-        System.out.print("Sorted array: ");
+        System.out.println("Sorted array:");
         for(int i = 0; i < N; i++) {
-            System.out.println(names[i]);
-            System.out.println(arr[i]);
             
+            System.out.print(arr[i]+" ");
+        }
+        System.out.println();
+        for(int i = 0; i < N; i++) {
+            
+            System.out.print(names[i]+" ");
         }
     }
 }

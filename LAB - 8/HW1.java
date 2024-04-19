@@ -12,29 +12,29 @@ public class HW1 {
             a[i]=sc.nextDouble();
         }
         double max = a[0];
-        int maxi = 0;
+        int maxIndex = 0;
         double min = a[0];
-        int mini = 0;
+        int minIndex = 0;
         double sum = 0;
         double avg = 0;
         for(int i = 1; i<N; i++){
             if(a[i]>max){
                 max = a[i];
-                maxi = i;
+                maxIndex = i;
             }
         }
         for(int i = 1; i<N; i++){
             if(a[i]<min){
                 min = a[i];
-                mini = i;
+                minIndex = i;
             }
         }
         for(int i = 0; i<N; i++){
             sum = sum + a[i];
             avg = sum/N;
         }
-        System.out.println("Maximum element " + max + " found at index " + maxi);
-        System.out.println("Minimum element " + min + " found at index " + mini);
+        System.out.println("Maximum element " + max + " found at index " + maxIndex);
+        System.out.println("Minimum element " + min + " found at index " + minIndex);
         System.out.println("Summation: "+sum);
         System.out.println("Average: "+avg);
     }

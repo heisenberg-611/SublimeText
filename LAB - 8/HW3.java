@@ -1,6 +1,8 @@
+import java.util.TreeSet;
 import java.util.Scanner;
 
 public class HW3 {
+    
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         
@@ -20,25 +22,29 @@ public class HW3 {
             arr2[i] = sc.nextInt();
         }
         
-        boolean ss = true;
-        for(int i = 0; i < M; i++) {
-            boolean found = false;
-            for(int j = 0; j < N; j++) {
-                if(arr2[i] == arr1[j]) {
-                    found = true;
-                    break;
-                }
-            }
-            if(!found) {
-                ss = false;
-                break;
-            }
-        }
-        
-        if(ss) {
-            System.out.println("Array2 is a subset of Array1.");
+        if (!SS(arr1, arr2)) {
+            System.out.println("arr2 is not a subset of arr1");
         } else {
-            System.out.println("Array2 is not a subset of Array1.");
+            System.out.println("arr2 is a subset of arr1");
         }
+    }
+
+    public static boolean SS(int[] arr1, int[] arr2) {
+    
+        if (arr2.length > arr1.length) {
+            return false;
+        }
+
+        TreeSet<Integer> set = new TreeSet<>();
+        for (int i : arr1) {
+            set.add(i);
+        }
+
+        for (int i : arr2) {
+            if (!set.contains(i)) {
+                return false;
+            }
+        }
+        return true;
     }
 }
