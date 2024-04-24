@@ -1,35 +1,22 @@
 import java.util.Scanner;
 
-public class Gemini_lab_6
- {
+public class Gemini_lab_6 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        String password = sc.nextLine();
-        boolean hasUppercase = false;
-        boolean hasLowercase = false;
-        boolean hasDigit = false;
+        System.out.printf("Enter your age: ");
+        int age = sc.nextInt();
+        System.out.printf("Enter your salary: ");
+        int salary = sc.nextInt();
+        double t = calcTax(age, salary);
+        System.out.printf("Tax: %.2f", t);
+    }
 
-        boolean isValid = true;
-
-        if (password.length() < 8) {
-            isValid = false;
+    static double calcTax(int age, int salary) {
+        if (age < 18 && salary < 10000) {
+            return 0;
         } else {
-            for (int i = 0; i < password.length(); i++) {
-                char ch = password.charAt(i);
-                if (ch >= 'A' && ch <= 'Z') {
-                    hasUppercase = true;
-                } else if (ch >= 'a' && ch <= 'z') {
-                    hasLowercase = true;
-                } else if (ch >= '0' && ch <= '9') {
-                    hasDigit = true;
-                }
-            }
-            if (!(hasUppercase && hasLowercase && hasDigit)) {
-                isValid = false;
-            }
+            double taxRate = 0.2; 
+            return salary * taxRate;
         }
-
-        System.out.println(isValid ? "True" : "False");
-        sc.close();
     }
 }
