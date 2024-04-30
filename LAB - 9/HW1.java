@@ -8,7 +8,7 @@ public class HW1{
         int n = scanner.nextInt();
 
         int sum = specialSum(n);
-        System.out.println("Special sum up to " + n + ": " + sum);
+        System.out.println(sum);
     }
 
     // Method to check if a number is prime

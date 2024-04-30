@@ -24,7 +24,7 @@ public class HW3 {
             int salary = sc.nextInt();
             double tax = calcTax(age, salary);
             System.out.println("Month" + i + " tax: " + tax);
-            sum = sum + tax;
+            sum += tax;
         }
         System.out.println("Total Yearly Tax: " + sum);
     }
