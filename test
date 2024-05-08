@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class FirstOddNumberPosition {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Create an array to store 10 numbers
+        int[] numbers = new int[10];
+        
+        // Read 10 numbers from the user and store them in the array
+        for (int i = 0; i < 10; i++) {
+            System.out.print("Enter number " + (i + 1) + ": ");
+            numbers[i] = scanner.nextInt();
+        }
+        
+        // Find the first odd number and its position
+        int oddNumber = 0;
+        int position = -1; // Default position if no odd number is found
+        for (int i = 0; i < 10; i++) {
+            if (numbers[i] % 2 != 0) {
+                oddNumber = numbers[i];
+                position = i + 1; // Position is 1-based, so add 1
+                break; // Break the loop once the first odd number is found
+            }
+        }
+        
+        // Print the first odd number and its position
+        if (position != -1) {
+            System.out.println("The first odd number is " + oddNumber + " at position " + position);
+        } else {
+            System.out.println("No odd numbers were found in the array.");
+        }
+        
+        scanner.close();
+    }
+}

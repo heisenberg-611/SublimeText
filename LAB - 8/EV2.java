@@ -13,14 +13,16 @@ public class EV2 {
         }
         
         int searchNumber = sc.nextInt();
-        int i = 0;
-        for( i = 0; i < N; i++) {
+        
+        int dj = 0;
+        for(int i = 0; i < N; i++) {
             if(a[i] == searchNumber) {
                 f = true;
+                dj=i;
             }
         }
         if(f){
-            System.out.println(searchNumber + " is at index " + i);
+            System.out.println(searchNumber + " is at index " + dj);
         }
         else{
             System.out.println("Element not found.");
