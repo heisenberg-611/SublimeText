@@ -1,20 +1,3 @@
-#include<iostream>
-#include<climits>
-#include<algorithm>
-#include<vector>
-#include<map>
-#include<unordered_map>
-#include<set>
-#include<unordered_set>
-#include<stack>
-#include<queue>
-#include<math.h>
-#include<stdlib.h>
-#include<string.h>
-#include<stdio.h>
-#include<string>
-#include<assert.h>
-#include<utility>
 #include<bits/stdc++.h>
 using namespace std;
 #define len(x) int((x).size())
