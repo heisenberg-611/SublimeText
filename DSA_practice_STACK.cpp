@@ -1,58 +1,51 @@
-#include <iostream>
-
+#include<iostream>
 using namespace std;
 
-#define nl endl  // For cleaner newline characters
+#define nl endl
 
 #define STACK_MAX 100
 
-// Structure to represent a stack
-struct Stack {
-    int top;      // Index of the top element in the stack
-    int data[STACK_MAX]; // Array to store stack elements
-};
+typedef struct{
+	int top;
+	int data [STACK_MAX];
+} Stack;
 
-// Function to check if the stack is full
-bool isFull(Stack *s) {
-    return s->top == STACK_MAX - 1;
+void push(Stack *s, int item){
+	if (s->top < STACK_MAX){
+		s->data[s->top] = item;
+		s->top = s->top + 1;
+	} else {
+		cout<<"Stack is full!"<<nl;
+	}
 }
 
-// Function to check if the stack is empty
-bool isEmpty(Stack *s) {
-    return s->top == -1;
-}
-
-// Function to push (insert) an element onto the stack
-void push(Stack *s, int item) {
-    if (isFull(s)) {
-        cout << "Stack is full!" << nl;
-        return;
-    }
-    s->data[++s->top] = item;  // Pre-increment for efficiency
-}
-
-// Function to pop (remove) an element from the stack
-int pop(Stack *s) {
-    if (isEmpty(s)) {
-        cout << "Stack is empty" << nl;
-        return -1; // Indicate error or special value for empty stack
-    }
-    return s->data[s->top--];  // Post-decrement for efficiency
+int pop(Stack *s){
+	int item;
+	
+	if(s->top == 0){
+		cout<<"Stack is empty"<<nl;
+		return -1;
+	}else{
+		s->top = s->top - 1;
+		item = s->data[s->top];
+	}
+	return item;
 }
 
 int main() {
     Stack s;  // Create a stack instance
 
     // Initialize the top pointer (common practice for clarity)
-    s.top = -1;
+    s.top = 0;
 
     // Example usage of push and pop
     push(&s, 10);
     push(&s, 20);
     push(&s, 30);
 
-    cout << pop(&s) << " ";  // Output: 30
+    cout << pop(&s) << nl;  // Output: 30
     cout << pop(&s) << endl;  // Output: 20
-
+    cout << pop(&s) << endl;
+    cout << pop(&s) << endl;
     return 0;
 }
