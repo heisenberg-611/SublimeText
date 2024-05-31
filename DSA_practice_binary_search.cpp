@@ -27,3 +27,4 @@ int main(){
     int k = binary_search(A, b, x);
     cout<<k<<endl;
 }
+
