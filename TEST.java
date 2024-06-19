@@ -1,4 +1,4 @@
-public class test {
+public class TEST {
   public static String charShifter(String input, int n) {
     StringBuilder result = new StringBuilder();
     for (char c : input.toCharArray()) {
