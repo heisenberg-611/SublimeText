@@ -20,12 +20,10 @@ public class Task8 {
                     break;
                 }
             }
-            
             if (primeConunter) {
                 prime_count++;
             }
         }
-        
         System.out.println("There are " + prime_count + " prime numbers between " + start + " and " + end);
     }
 }
