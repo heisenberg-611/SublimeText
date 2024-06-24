@@ -1,0 +1,15 @@
+[
+	{
+		"correct_answers":
+		[
+			"Sum: 14\nMinimum: 1\nMaximum: 9\nAverage: 3.5"
+		],
+		"test": "1\n\n4\n\n2\n\n9\n\n2\n\n-4 3\n\n-1 0 1\n"
+	},
+	{
+		"test": "34\n\n-11 50 24\n\n-24 2\n\n-4 0 8 12\n"
+	},
+	{
+		"test": "23 2 -4 0 8 12 34 -11 53 21\n"
+	}
+]

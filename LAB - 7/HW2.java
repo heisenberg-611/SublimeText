@@ -14,7 +14,6 @@ public class HW2 {
             } else {
                 
                 f.append(c).append(count);
-                
                 count = 1;
                 c = a.charAt(i);
             }

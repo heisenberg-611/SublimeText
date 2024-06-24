@@ -13,14 +13,14 @@ public class Task8 {
                 continue;
             }
             
-            boolean primeConunter = true;
+            boolean primeCntr = true;
             for (int j = 2; j <= i/2; j++) {
                 if (i % j == 0) {
-                    primeConunter = false;
+                    primeCntr = false;
                     break;
                 }
             }
-            if (primeConunter) {
+            if (primeCntr) {
                 prime_count++;
             }
         }
