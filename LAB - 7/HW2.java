@@ -18,7 +18,7 @@ public class HW2 {
                 c = a.charAt(i);
             }
         }
-        f.append(c).append(count);
+        f.append(c);
         System.out.print(f);
     }
 }
