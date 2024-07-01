@@ -1,36 +1,43 @@
-// Write a Java program that will ask the 
-// user to input a word in small letters where
-//  each of its alphabets is unique and has not 
-//  been entered before by the user. 
-//  If the user does input a word that consists 
-//  of duplicate alphabets, the program should 
-//  reject the user’s input and ask for another 
-//  word.
 import java.util.Scanner;
-
 public class Task4 {
     public static void main(String[] args) {
-    	Scanner sc = new Scanner(System.in);
-        String a = sc.nextLine();
-        StringBuffer fString = new StringBuffer();
-        int dlCount = 0;
-        int count = 0;
-        for(int i = 0; i<a.length(); i++){
-            for(int j = 0; j<a.length(); j++){
-                if(a.charAt(i) == a.charAt(j)){
-                    dlCount++;
-                    if(dlCount > 1){
-                        System.out.println("Duplicate found");
-                        a = sc.nextLine();
-                        i = 0;
-                        j = 0;
+        Scanner sc = new Scanner(System.in);
+        while (true) {
+            String a = sc.nextLine();
+            char[] arr = a.toCharArray();
+            int N = arr.length;
+            boolean dPl = false;
+            int count = 0;
+            for (int i = 0; i < N; i++) {
+                boolean Counted = false;
+                for (int k = 0; k < i; k++) {
+                    if (arr[i] == arr[k]) {
+                        Counted = true;
+                        break;
                     }
                 }
-                dlCount = 0;
+                if (Counted) {
+                    continue;
+                }
+                for (int j = 0; j < N; j++) {
+                    if (arr[i] == arr[j]) {
+                        count++;
+                    }
+                }
+                if (count > 1) {
+                    System.out.println("'" + arr[i] + "'" + " has been counted " + count + " times in the word " + "''" + a + "''");
+                    dPl = true;
+                }
+                count = 0;
+            }
+            if (!dPl) {
+                System.out.println("You entered " + a);
+                break;
+            }
+            else{
+                System.out.println("Please enter another word.");
             }
         }
-        System.out.println(fString);
-        System.out.println(dlCount);
         sc.close();
     }
 }
