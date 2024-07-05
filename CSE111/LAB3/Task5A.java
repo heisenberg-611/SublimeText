@@ -4,7 +4,7 @@ public class Task5A {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.print("N: ");
+        System.out.print("N = ");
         int N = sc.nextInt();
         int[] arr = new int[N];
         System.out.println("Please enter the elements of the array: ");
@@ -18,11 +18,12 @@ public class Task5A {
                 chki++;
             }
         }
-        System.out.println("Removed elements: " + (N - chki));
         System.out.print("New Array: ");
         for (int i = 0; i < chki; i++) {
             System.out.print(arr[i] + " ");
         }
+        System.out.println();
+        System.out.println("Removed elements: " + (N - chki));
         System.out.println();
     }
 }

@@ -1,8 +1,11 @@
 [
 	{
-		"test": "ABBCCCCCBBAB\n"
+		"test": "fahim\n"
 	},
 	{
-		"test": "AAABBBBCDDBBECE\n"
+		"test": "farah\nakbar\nakbor\n"
+	},
+	{
+		"test": "alanna\nronan\njohn\n"
 	}
 ]

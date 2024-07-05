@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+import java.util.Arrays;
 public class Task1A {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -9,10 +9,10 @@ public class Task1A {
         for (int i = 0; i < N; i++) {
             arr[i] = sc.nextInt();
         }
-        System.out.println("Input Array:");
-        for (int i = 0; i < N; i++) {
-            System.out.print(arr[i] + " ");
-        }
+        System.out.println("Input Array:"+Arrays.toString(arr));
+        // for (int i = 0; i < N; i++) {
+        //     System.out.print(arr[i] + " ");
+        // }
         System.out.println("Remove Element: ");
         int x = sc.nextInt();
         boolean Found = false;
