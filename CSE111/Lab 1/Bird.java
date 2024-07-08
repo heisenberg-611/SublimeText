@@ -1,18 +1,17 @@
 public class Bird {
     public String name;
-    public String noise;
     public int Up;
 
     public void flyUp(int a) {
         Up = a;
-        System.out.println(name + " has flown up " + this.Up + " feet.");
+        System.out.println(name + " has flown up " + Up + " feet.");
     }
 
     public void makeNoise(){
-        if(name == "Parrot"){
+        if(name.equals("Parrot")){
             System.out.println("Squawk");
         }
-        if(name == "Eagle"){
+        if(name.equals("Eagle")){
             System.out.println("Squee");
         }
     }

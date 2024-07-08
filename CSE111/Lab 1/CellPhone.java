@@ -10,7 +10,7 @@ public class CellPhone {
         } else {
             contacts[i] = a;
             System.out.println("Contact Stored");
-            ++i;
+            i++;
             cnCount++;
         }
     }
