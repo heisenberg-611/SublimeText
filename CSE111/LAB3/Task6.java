@@ -14,7 +14,6 @@ public class Task6 {
                 fString.append(ch);
             }
         }
-        
         System.out.println(fString);
         sc.close();
     }

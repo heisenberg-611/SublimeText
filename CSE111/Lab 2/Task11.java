@@ -25,6 +25,5 @@ public class Task11B {
             }
             System.out.println();
         }
-
     }
 }
