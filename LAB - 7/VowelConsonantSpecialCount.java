@@ -1,3 +1,4 @@
+import java.util.Scanner;
 public class VowelConsonantSpecialCount {
 
     public static void main(String[] args) {

@@ -1,5 +1,8 @@
 [
 	{
 		"test": "She sells sea shells on the sea sholl\nl\n"
+	},
+	{
+		"test": "She sells sea shells on the sea sholl\no\n"
 	}
 ]

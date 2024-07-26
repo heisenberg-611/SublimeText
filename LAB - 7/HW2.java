@@ -14,12 +14,11 @@ public class HW2 {
             } else {
                 
                 f.append(c).append(count);
-                
                 count = 1;
                 c = a.charAt(i);
             }
         }
-        f.append(c).append(count);
+        f.append(c);
         System.out.print(f);
     }
 }
