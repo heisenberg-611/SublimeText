@@ -1,5 +1,6 @@
-#include "iostream"
-#include "stdio.h"
+#include <iostream>
+#include <stdio.h>
+using namespace std;
 
 class Book{
     public:
@@ -11,5 +12,6 @@ class Book{
 };
 int main() {
     Book book;
+    cout << book.help << endl;
     return 0;
 }

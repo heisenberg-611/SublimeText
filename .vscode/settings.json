@@ -11,5 +11,9 @@
         "statusBarItem.remoteForeground": "#15202b",
         "tab.activeBorder": "#d3c3e6"
     },
-    "peacock.color": "#b99fd7"
+    "peacock.color": "#b99fd7",
+    "files.associations": {
+        "*.java": "java",
+        "iostream": "cpp"
+    }
 }
