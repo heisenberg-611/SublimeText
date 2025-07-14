@@ -21,9 +21,10 @@ int binary_search(int A[], int n, int x){
 }
 
 int main(){
-    int A[]= {1,2,3,4,5,6,7,8,9,0};
+    int A[]= {0,1,2,3,5,6,7,8,9};
     int b,x;
     cin>>b>>x;
+    // cin>>b>>x;
     int k = binary_search(A, b, x);
     cout<<k<<endl;
 }
